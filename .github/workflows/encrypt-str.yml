@@ -20,7 +20,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run a one-line script
-        run: echo $ENCRYPTION_KEY | wc -m
+        run: | 
+          echo $ENCRYPTION_KEY | wc -m
+          echo $INPUT_TEXT
         env: 
           ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
           
