@@ -22,7 +22,7 @@ jobs:
       - name: Run a one-line script
         run: | 
           echo $ENCRYPTION_KEY | wc -m
-          echo ${{ inputs.text }}
+          echo '${{ inputs.text }}'
         env: 
           ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
           
